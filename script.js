@@ -666,6 +666,10 @@ languageSelect.onchange = () => {
   currentLang === "fr" ? "Examens et contrôle continu 📝" :
   currentLang === "en" ? "Exams and Continuous Assessment 📝" :
   "الامتحانات والتقويم المستمر 📝";
+  btnNotes.textContent = currentLang === "fr" ? "Les notes des étudiants" :
+                       currentLang === "en" ? "Students' Scores" :
+                       "نقاط الطلبة";
+
   btnProgramme.textContent = currentLang==="fr"?"Programme pédagogique":currentLang==="en"?"Pedagogical Program":"البرنامج البيداغوجي";
   btnLivre.textContent = currentLang==="fr"?"Livre":currentLang==="en"?"Book":"الكتاب";
   btnVideo.textContent = currentLang==="fr"?"Vidéos YouTube":currentLang==="en"?"YouTube Videos":"فيديوهات يوتيوب";
