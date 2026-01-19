@@ -1,7 +1,6 @@
 /***********************************
  * ====== الطلاب ======
  ***********************************/
-
 const studentsG08 = [
   "Abderrezek Akram","Ameziane Sid-Ali","Belaidi Abdellatif","Benadjiel Wissam","Benali Abdallah Merouane",
   "Benguessoum Mohamed Arezki","BENKEZIM Sofiane","Biou Mohamed Amine","Bouhealouane Faiz","Bouska Chokri",
@@ -213,48 +212,6 @@ Unité pédagogique : UEF 2.1.2</li>
 );
 btnExam.onclick = () => {
   clearAll();
-
-  tdContainer.innerHTML = `
-    <div class="td-detail">
-      <h2>${examTexts.title[currentLang]}</h2>
-
-      <div class="exam-container">
-
-        <div class="exam-box">
-          <h3>${examTexts.universities.uhb[currentLang]}</h3>
-          <a href="examens/UHB_Mecanique_Rationnelle.pdf" target="_blank" class="exam-link">
-            ${examTexts.pdf[currentLang]}
-          </a>
-          <a href="https://www.univ-houari-boumediene.dz" target="_blank" class="exam-link">
-            ${examTexts.link[currentLang]}
-          </a>
-        </div>
-
-        <div class="exam-box">
-          <h3>${examTexts.universities.bejaia[currentLang]}</h3>
-          <a href="examens/Bejaia_Mecanique_Rationnelle.pdf" target="_blank" class="exam-link">
-            ${examTexts.pdf[currentLang]}
-          </a>
-          <a href="https://www.univ-bejaia.dz" target="_blank" class="exam-link">
-            ${examTexts.link[currentLang]}
-          </a>
-        </div>
-
-        <div class="exam-box">
-          <h3>${examTexts.universities.batna[currentLang]}</h3>
-          <a href="examens/Batna02_Mecanique_Rationnelle.pdf" target="_blank" class="exam-link">
-            ${examTexts.pdf[currentLang]}
-          </a>
-          <a href="https://www.univ-batna2.dz" target="_blank" class="exam-link">
-            ${examTexts.link[currentLang]}
-          </a>
-        </div>
-
-      </div>
-    </div>
-  `;
-};
-
 
   tdContainer.innerHTML = `
     <div class="exam-container">
