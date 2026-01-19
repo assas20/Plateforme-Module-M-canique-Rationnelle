@@ -26,6 +26,42 @@ th { background:#004080; color:white; position:sticky; top:0; }
 .status-Absent { background:#ffcdd2; color:#c62828; font-weight:bold; }
 .status-Holiday { background:#e0e0e0; color:#616161; font-weight:bold; }
 .warning { color:red; font-weight:bold; font-size:0.9em; display:block; text-align:left; }
+.exam-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.exam-box {
+  flex: 1 1 30%;
+  background: #ffffff;
+  border: 2px solid #004080;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.exam-box h3 {
+  color: #004080;
+  margin-bottom: 15px;
+}
+
+.exam-link {
+  display: block;
+  margin: 8px 0;
+  padding: 10px;
+  background: #0060c0;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.exam-link:hover {
+  background: #0080ff;
+}
 
 /* Social icons */
 .social-icons a { margin-right:10px; font-size:1.2em; color:#004080; }

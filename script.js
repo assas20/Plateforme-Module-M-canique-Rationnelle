@@ -210,6 +210,45 @@ Unité pédagogique : UEF 2.1.2</li>
    </ul>
    <p><a href="${pdfCours}" target="_blank" style="font-weight:bold; color:#004080; text-decoration:underline;">اضغط هنا لتحميل PDF</a></p>`
 );
+btnExam.onclick = () => {
+  clearAll();
+
+  tdContainer.innerHTML = `
+    <div class="exam-container">
+
+      <div class="exam-box">
+        <h3>Université Houari Boumediene</h3>
+        <a href="examens/UHB_Mecanique_Rationnelle.pdf" target="_blank" class="exam-link">
+          📄 تحميل ملف PDF
+        </a>
+        <a href="https://www.univ-houari-boumediene.dz" target="_blank" class="exam-link">
+          🌐 رابط الجامعة
+        </a>
+      </div>
+
+      <div class="exam-box">
+        <h3>Université de Bejaia</h3>
+        <a href="examens/Bejaia_Mecanique_Rationnelle.pdf" target="_blank" class="exam-link">
+          📄 تحميل ملف PDF
+        </a>
+        <a href="https://www.univ-bejaia.dz" target="_blank" class="exam-link">
+          🌐 رابط الجامعة
+        </a>
+      </div>
+
+      <div class="exam-box">
+        <h3>Université de Batna 02</h3>
+        <a href="examens/Batna02_Mecanique_Rationnelle.pdf" target="_blank" class="exam-link">
+          📄 تحميل ملف PDF
+        </a>
+        <a href="https://www.univ-batna2.dz" target="_blank" class="exam-link">
+          🌐 رابط الجامعة
+        </a>
+      </div>
+
+    </div>
+  `;
+};
 
 btnProgramme.onclick=()=>showSimpleBox("Programme Pédagogique",
   `<p>Programme officiel ENSTP – CPST</p>
