@@ -1,7 +1,7 @@
 body { font-family: Arial; margin:0; padding:0; background:#f9f9f9; color:#333; }
 header { background:#004080; color:white; text-align:center; padding:20px; }
 header h2 {
-    color: rgb(0, 30, 128);
+    color: green;
 }
 header .logo { width:200px; margin-bottom:0px; }
 .container { display:flex; max-width:1200px; margin:auto; }
