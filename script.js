@@ -100,38 +100,47 @@ const btnS04 = document.getElementById("btnS04");
 const btnListe = document.getElementById("btnListe");
 const btnCours = document.getElementById("btnCours");
 const btnExam = document.getElementById("btnExam");
+const btnExam = document.getElementById("btnExam");
 
 btnExam.onclick = () => {
-  clearAll();
-  
+  clearAll(); // مسح كل شيء من الـ main
+
   // إنشاء الأزرار الداخلية للخانات
   const exams = [
-    { name: currentLang==="fr"?"Université Houari Boumediene":"Houari Boumediene University","ar":"جامعة هواري بومدين", link:"#"},
-    { name: currentLang==="fr"?"Université de Bejaia":"Bejaia University","ar":"جامعة بجاية", link:"#"}
+    {
+      name: currentLang==="fr"?"Université Houari Boumediene":"Houari Boumediene University",
+      ar:"جامعة هواري بومدين",
+      link:"TDs/Exams/HouariBoumediene.pdf"
+    },
+    {
+      name: currentLang==="fr"?"Université de Bejaia":"Bejaia University",
+      ar:"جامعة بجاية",
+      link:"TDs/Exams/Bejaia.pdf"
+    }
   ];
-  
+
   exams.forEach(exam => {
     const btn = document.createElement("button");
     btn.className = "td-btn";
-    
-    // اختيار الاسم حسب اللغة
     btn.textContent = currentLang==="ar"?exam.ar:exam.name;
-    
-    // عند الضغط على الزر نعرض رابط أو محتوى
+
     btn.onclick = () => {
       tdContainer.innerHTML = `
         <div class="td-detail">
           <h3>${btn.textContent}</h3>
-          <p><a href="${exam.link}" target="_blank" style="font-weight:bold; color:#004080; text-decoration:underline;">
-             اضغط هنا للوصول
-          </a></p>
+          <p>
+            <a href="${exam.link}" target="_blank" style="font-weight:bold; color:#004080; text-decoration:underline;">
+               اضغط هنا لتحميل / فتح PDF
+            </a>
+          </p>
         </div>
       `;
     };
-    
+
     tdContainer.appendChild(btn);
   });
 };
+
 
 const btnProgramme = document.getElementById("btnProgramme");
 const btnLivre = document.getElementById("btnLivre");
