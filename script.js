@@ -222,7 +222,7 @@ btnExam.onclick = () => {
           📄 تحميل ملف PDF
         </a>
         <a href="https://www.univ-houari-boumediene.dz" target="_blank" class="exam-link">
-          🌐 https://www.bing.com/ck/a?!&&p=ccacd93b1daffe356506263376c883030edcd266fd7dcb04fce7d0fc97dd58a4JmltdHM9MTc2ODc4MDgwMA&ptn=3&ver=2&hsh=4&fclid=2912112b-064c-62a4-3ebe-076507e06300&psq=+pdf+examen+mecanique+rationnelle+PDF+usthb&u=a1aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vZmlsZS9kLzBCd19Ha1M1NXVNQ2tjbnBxT0ZJM1VETlFlRGcvZWRpdA
+          🌐 https://www.espace-etudiant.net/forum/
         </a>
       </div>
 
@@ -242,8 +242,7 @@ btnExam.onclick = () => {
           📄 تحميل ملف PDF
         </a>
         <a href="https://www.univ-batna2.dz" target="_blank" class="exam-link">
-          🌐 https://www.bing.com/ck/a?!&&p=710bab58b862ce9875948a3293409265f47e2f5ee080c7c78600ff12b7e0bfa5JmltdHM9MTc2ODc4MDgwMA&ptn=3&ver=2&hsh=4&fclid=2912112b-064c-62a4-3ebe-076507e06300&psq=+pdf+examen+mecanique+rationnelle+PDF+batna&u=a1aHR0cHM6Ly9zdGFmZi51bml2LWJhdG5hMi5kei9zaXRlcy9kZWZhdWx0L2ZpbGVzL3lhaGlhLWxhemhhci9maWxlcy90ZF9tZWNfcmF0aW9ubmVsbGVfb2ZmaWNpZWwucGRm
-        </a>
+          🌐https://univ-batna2.dz/
       </div>
 
     </div>
