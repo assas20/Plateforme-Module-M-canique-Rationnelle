@@ -1,43 +1,6 @@
 /***********************************
  * ====== الطلاب ======
  ***********************************/
-/***********************************
- * ====== نصوص متعددة اللغات (Examens) ======
- ***********************************/
-const examTexts = {
-  title: {
-    fr: "Examens et contrôle continu",
-    en: "Exams and Continuous Assessment",
-    ar: "الامتحانات والتقويم المستمر"
-  },
-  pdf: {
-    fr: "📄 Télécharger le PDF",
-    en: "📄 Download PDF",
-    ar: "📄 تحميل ملف PDF"
-  },
-  link: {
-    fr: "🌐 Site officiel",
-    en: "🌐 Official website",
-    ar: "🌐 الموقع الرسمي"
-  },
-  universities: {
-    uhb: {
-      fr: "Université Houari Boumediene",
-      en: "Houari Boumediene University",
-      ar: "جامعة هواري بومدين"
-    },
-    bejaia: {
-      fr: "Université de Bejaia",
-      en: "Bejaia University",
-      ar: "جامعة بجاية"
-    },
-    batna: {
-      fr: "Université de Batna 02",
-      en: "Batna 02 University",
-      ar: "جامعة باتنة 02"
-    }
-  }
-};
 
 const studentsG08 = [
   "Abderrezek Akram","Ameziane Sid-Ali","Belaidi Abdellatif","Benadjiel Wissam","Benali Abdallah Merouane",
