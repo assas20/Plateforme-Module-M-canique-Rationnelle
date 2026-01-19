@@ -344,6 +344,82 @@ function showGroup07() {
     </table>
   `;
 }
+btnNotes.onclick = () => {
+  clearAll();
+
+  tdContainer.innerHTML = `
+    <div class="notes-container">
+
+      <div class="group-box" onclick="showGroupNotes('G07')">
+        Groupe 07
+      </div>
+
+      <div class="group-box" onclick="showGroupNotes('G08')">
+        Groupe 08
+      </div>
+
+    </div>
+  `;
+};
+
+// دالة لحساب نقاط الحضور وفق Barème
+function calculatePresencePoints(absences) {
+  if (absences === 0) return 2;
+  if (absences === 1) return 1.5;
+  if (absences === 2) return 1;
+  if (absences === 3) return 0.5;
+  return 0;
+}
+
+// دالة عرض الجدول للمجموعتين
+function showGroupNotes(group) {
+  clearAll();
+
+  const students = group === 'G07' ? studentsG07 : studentsG08;
+  const data = group === 'G07' ? g07Data : g08Data;
+
+  // حساب الغيابات لكل طالب
+  let absencesCount = {};
+  students.forEach(s => absencesCount[s] = 0);
+
+  Object.values(data).forEach(day => {
+    day.forEach((status, idx) => {
+      const name = students[idx];
+      if (status === "Absent") absencesCount[name]++;
+    });
+  });
+
+  // إنشاء الصفوف
+  let rows = "";
+  students.forEach(name => {
+    const presencePoints = calculatePresencePoints(absencesCount[name]);
+    rows += `
+      <tr>
+        <td>${name}</td>
+        <td>${presencePoints}</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+    `;
+  });
+
+  tdContainer.innerHTML = `
+    <h2>${group}</h2>
+    <table class="notes-table">
+      <tr>
+        <th>Nom & Prénom</th>
+        <th>Présence</th>
+        <th>Participation</th>
+        <th>Interrogation</th>
+        <th>Contrôle Continu</th>
+        <th>Examens</th>
+      </tr>
+      ${rows}
+    </table>
+  `;
+}
 
 function showGroup08() {
   clearAll();
