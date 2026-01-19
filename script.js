@@ -380,6 +380,10 @@ languageSelect.onchange = () => {
   btnS04.textContent = currentLang==="fr"?"Semestre 04":currentLang==="en"?"Semester 04":"الفصل 04";
   btnListe.textContent = currentLang==="fr"?"Liste de Présence":currentLang==="en"?"Attendance List":"قائمة الحضور";
   btnCours.textContent = currentLang==="fr"?"Cours":currentLang==="en"?"Course":"الدروس";
+  btnExam.textContent =
+  currentLang === "fr" ? "Examens et contrôle continu 📝" :
+  currentLang === "en" ? "Exams and Continuous Assessment 📝" :
+  "الامتحانات والتقويم المستمر 📝";
   btnProgramme.textContent = currentLang==="fr"?"Programme pédagogique":currentLang==="en"?"Pedagogical Program":"البرنامج البيداغوجي";
   btnLivre.textContent = currentLang==="fr"?"Livre":currentLang==="en"?"Book":"الكتاب";
   btnVideo.textContent = currentLang==="fr"?"Vidéos YouTube":currentLang==="en"?"YouTube Videos":"فيديوهات يوتيوب";
