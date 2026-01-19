@@ -1,0 +1,34 @@
+body { font-family: Arial; margin:0; padding:0; background:#f9f9f9; color:#333; }
+header { background:#004080; color:white; text-align:center; padding:20px; }
+header .logo { width:200px; margin-bottom:0px; }
+.container { display:flex; max-width:1200px; margin:auto; }
+.sidebar { width:220px; padding:15px; background:#f0f0f0; display:flex; flex-direction:column; gap:5px; }
+.sidebar select, .sidebar button { padding:8px; border-radius:5px; border:none; cursor:pointer; background:#0060c0; color:white; font-weight:bold; }
+.sidebar button:hover { background:#5f88b1; }
+.content { flex:1; padding:15px; }
+.assas-name { color: #d32f2f; font-weight: bold; }
+
+/* TD Buttons */
+.td-btn { background:#cce0ff; color:#004080; font-weight:bold; padding:10px; margin:5px; border-radius:8px; border:1px solid #004080; cursor:pointer; text-align:left; width:100%; }
+.td-detail { background:#fff; border:1px solid #ddd; padding:10px; margin:5px 0; border-radius:5px; }
+.td-detail a { color:#004080; text-decoration:none; font-weight:bold; }
+.td-detail a:hover { text-decoration:underline; }
+
+/* Table */
+table { width:100%; border-collapse:collapse; margin-top:10px; }
+th, td { border:1px solid #ddd; padding:8px; text-align:center; min-width:70px; }
+th { background:#004080; color:white; position:sticky; top:0; }
+.status-Present { background:#c8e6c9; color:#2e7d32; font-weight:bold; }
+.status-Justified { background:#fff9c4; color:#f9a825; font-weight:bold; }
+.status-Absent { background:#ffcdd2; color:#c62828; font-weight:bold; }
+.status-Holiday { background:#e0e0e0; color:#616161; font-weight:bold; }
+.warning { color:red; font-weight:bold; font-size:0.9em; display:block; text-align:left; }
+
+/* Social icons */
+.social-icons a { margin-right:10px; font-size:1.2em; color:#004080; }
+.social-icons a:hover { color:#0080ff; }
+
+/* Collapsible groups */
+.collapsible { background:#0060c0; color:white; cursor:pointer; padding:10px; width:100%; border:none; text-align:left; outline:none; font-weight:bold; margin:5px 0; border-radius:5px; }
+.collapsible:hover { background:#0080ff; }
+.table-wrapper { display:none; margin-bottom:15px; }
