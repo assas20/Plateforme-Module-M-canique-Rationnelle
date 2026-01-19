@@ -388,30 +388,6 @@ function showGroupNotes(group) {
       if (status === "Absent") absencesCount[name]++;
     });
   });
-const notesText = `
-    <div class="notes-info">
-      <p>Je propose :</p>
-      <ul>
-        <li>3 points : note de cours</li>
-        <li>17 points pour TD :
-          <ul>
-            <li>10 points pour l’interrogation</li>
-            <li>5 points pour la participation</li>
-            <li>2 points pour la présence</li>
-          </ul>
-        </li>
-      </ul>
-      <p><strong>Barème de présence :</strong></p>
-      <ul>
-        <li>0 absence = 2</li>
-        <li>1 absence = 1,5</li>
-        <li>2 absences = 1</li>
-        <li>3 absences = 0,5</li>
-        <li>4 absences et plus = 0</li>
-      </ul>
-      <p><em>Ce barème est proposé par Mme Zoudi Nabila, chargée de cours.</em></p>
-    </div>
-  `;
 
   // إنشاء الصفوف
   let rows = "";
