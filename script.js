@@ -232,7 +232,7 @@ btnExam.onclick = () => {
           📄 تحميل ملف PDF
         </a>
         <a href="https://www.univ-bejaia.dz" target="_blank" class="exam-link">
-          🌐 رابط الجامعة
+          🌐 https://www.univdocs.com/2020/04/mecanique-rationnelle-st.html
         </a>
       </div>
 
