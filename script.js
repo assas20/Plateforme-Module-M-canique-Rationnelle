@@ -1,6 +1,44 @@
 /***********************************
  * ====== الطلاب ======
  ***********************************/
+/***********************************
+ * ====== نصوص متعددة اللغات (Examens) ======
+ ***********************************/
+const examTexts = {
+  title: {
+    fr: "Examens et contrôle continu",
+    en: "Exams and Continuous Assessment",
+    ar: "الامتحانات والتقويم المستمر"
+  },
+  pdf: {
+    fr: "📄 Télécharger le PDF",
+    en: "📄 Download PDF",
+    ar: "📄 تحميل ملف PDF"
+  },
+  link: {
+    fr: "🌐 Site officiel",
+    en: "🌐 Official website",
+    ar: "🌐 الموقع الرسمي"
+  },
+  universities: {
+    uhb: {
+      fr: "Université Houari Boumediene",
+      en: "Houari Boumediene University",
+      ar: "جامعة هواري بومدين"
+    },
+    bejaia: {
+      fr: "Université de Bejaia",
+      en: "Bejaia University",
+      ar: "جامعة بجاية"
+    },
+    batna: {
+      fr: "Université de Batna 02",
+      en: "Batna 02 University",
+      ar: "جامعة باتنة 02"
+    }
+  }
+};
+
 const studentsG08 = [
   "Abderrezek Akram","Ameziane Sid-Ali","Belaidi Abdellatif","Benadjiel Wissam","Benali Abdallah Merouane",
   "Benguessoum Mohamed Arezki","BENKEZIM Sofiane","Biou Mohamed Amine","Bouhealouane Faiz","Bouska Chokri",
@@ -205,41 +243,7 @@ Spécialisation : /
 Formation : Licence
 Semestre : S3
 Unité pédagogique : UEF 2.1.2</li>
-    const examTexts = {
-  title: {
-    fr: "Examens et contrôle continu",
-    en: "Exams and Continuous Assessment",
-    ar: "الامتحانات والتقويم المستمر"
-  },
-  pdf: {
-    fr: "📄 Télécharger le PDF",
-    en: "📄 Download PDF",
-    ar: "📄 تحميل ملف PDF"
-  },
-  link: {
-    fr: "🌐 Site officiel",
-    en: "🌐 Official website",
-    ar: "🌐 الموقع الرسمي"
-  },
-  universities: {
-    uhb: {
-      fr: "Université Houari Boumediene",
-      en: "Houari Boumediene University",
-      ar: "جامعة هواري بومدين"
-    },
-    bejaia: {
-      fr: "Université de Bejaia",
-      en: "Bejaia University",
-      ar: "جامعة بجاية"
-    },
-    batna: {
-      fr: "Université de Batna 02",
-      en: "Batna 02 University",
-      ar: "جامعة باتنة 02"
-    }
-  }
-};
-
+    
      
    </ul>
    <p><a href="${pdfCours}" target="_blank" style="font-weight:bold; color:#004080; text-decoration:underline;">اضغط هنا لتحميل PDF</a></p>`
