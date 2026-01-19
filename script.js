@@ -252,32 +252,33 @@ btnExam.onclick = () => {
     <div class="exam-container">
 
       <div class="exam-box">
-        <h3>Université Houari Boumediene</h3>
+        <h3>${examTexts.universities.uhb[currentLang]}</h3>
         <a href="examens/UHB_Mecanique_Rationnelle.pdf" target="_blank" class="exam-link">
-          📄 تحميل ملف PDF
+          ${examTexts.pdf[currentLang]}
         </a>
-        <a href="https://www.univ-houari-boumediene.dz" target="_blank" class="exam-link">
-          🌐 https://www.espace-etudiant.net/forum/
+        <a href="https://www.espace-etudiant.net/forum/" target="_blank" class="exam-link">
+          🌐 Lien
         </a>
       </div>
 
       <div class="exam-box">
-        <h3>Université de Bejaia</h3>
+        <h3>${examTexts.universities.bejaia[currentLang]}</h3>
         <a href="examens/Bejaia_Mecanique_Rationnelle.pdf" target="_blank" class="exam-link">
-          📄 تحميل ملف PDF
+          ${examTexts.pdf[currentLang]}
         </a>
-        <a href="https://www.univ-bejaia.dz" target="_blank" class="exam-link">
-          🌐 https://www.univdocs.com/2020/04/mecanique-rationnelle-st.html
+        <a href="https://www.univdocs.com/2020/04/mecanique-rationnelle-st.html" target="_blank" class="exam-link">
+          🌐 Lien
         </a>
       </div>
 
       <div class="exam-box">
-        <h3>Université de Batna 02</h3>
+        <h3>${examTexts.universities.batna[currentLang]}</h3>
         <a href="examens/Batna02_Mecanique_Rationnelle.pdf" target="_blank" class="exam-link">
-          📄 تحميل ملف PDF
+          ${examTexts.pdf[currentLang]}
         </a>
-        <a href="https://www.univ-batna2.dz" target="_blank" class="exam-link">
-          🌐https://univ-batna2.dz/
+        <a href="https://univ-batna2.dz/" target="_blank" class="exam-link">
+          🌐 Lien
+        </a>
       </div>
 
     </div>
