@@ -99,49 +99,6 @@ const btnS03 = document.getElementById("btnS03");
 const btnS04 = document.getElementById("btnS04");
 const btnListe = document.getElementById("btnListe");
 const btnCours = document.getElementById("btnCours");
-const btnExam = document.getElementById("btnExam");
-const btnExam = document.getElementById("btnExam");
-
-btnExam.onclick = () => {
-  clearAll(); // مسح كل شيء من الـ main
-
-  // إنشاء الأزرار الداخلية للخانات
-  const exams = [
-    {
-      name: currentLang==="fr"?"Université Houari Boumediene":"Houari Boumediene University",
-      ar:"جامعة هواري بومدين",
-      link:"TDs/Exams/HouariBoumediene.pdf"
-    },
-    {
-      name: currentLang==="fr"?"Université de Bejaia":"Bejaia University",
-      ar:"جامعة بجاية",
-      link:"TDs/Exams/Bejaia.pdf"
-    }
-  ];
-
-  exams.forEach(exam => {
-    const btn = document.createElement("button");
-    btn.className = "td-btn";
-    btn.textContent = currentLang==="ar"?exam.ar:exam.name;
-
-    btn.onclick = () => {
-      tdContainer.innerHTML = `
-        <div class="td-detail">
-          <h3>${btn.textContent}</h3>
-          <p>
-            <a href="${exam.link}" target="_blank" style="font-weight:bold; color:#004080; text-decoration:underline;">
-               اضغط هنا لتحميل / فتح PDF
-            </a>
-          </p>
-        </div>
-      `;
-    };
-
-    tdContainer.appendChild(btn);
-  });
-};
-
-
 const btnProgramme = document.getElementById("btnProgramme");
 const btnLivre = document.getElementById("btnLivre");
 const btnVideo = document.getElementById("btnVideo");
@@ -349,7 +306,6 @@ languageSelect.onchange = () => {
   btnS04.textContent = currentLang==="fr"?"Semestre 04":currentLang==="en"?"Semester 04":"الفصل 04";
   btnListe.textContent = currentLang==="fr"?"Liste de Présence":currentLang==="en"?"Attendance List":"قائمة الحضور";
   btnCours.textContent = currentLang==="fr"?"Cours":currentLang==="en"?"Course":"الدروس";
-  btnExam.textContent = currentLang==="fr"?"Examens et contrôle continu 📝":currentLang==="en"?"Exams & Continuous Assessment 📝":"الامتحانات و المراقبة المستمرة 📝";
   btnProgramme.textContent = currentLang==="fr"?"Programme pédagogique":currentLang==="en"?"Pedagogical Program":"البرنامج البيداغوجي";
   btnLivre.textContent = currentLang==="fr"?"Livre":currentLang==="en"?"Book":"الكتاب";
   btnVideo.textContent = currentLang==="fr"?"Vidéos YouTube":currentLang==="en"?"YouTube Videos":"فيديوهات يوتيوب";
