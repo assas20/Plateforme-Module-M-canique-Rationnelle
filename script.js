@@ -302,6 +302,7 @@ btnNotes.onclick = () => {
     </div>
   `;
 };
+
 function showGroup07() {
   clearAll();
 
@@ -319,11 +320,11 @@ function showGroup07() {
     rows += `
       <tr>
         <td>${name}</td>
-        <td>0</td>
-        <td>—</td>
-        <td>—</td>
-        <td>—</td>
         <td>✔</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
       </tr>
     `;
   });
@@ -333,16 +334,17 @@ function showGroup07() {
     <table class="notes-table">
       <tr>
         <th>Nom & Prénom</th>
-        <th>Absences</th>
-        <th>Contrôle Continu</th>
-        <th>Interrogation</th>
-        <th>Participation</th>
         <th>Présence</th>
+        <th>Participation</th>
+        <th>Interrogation</th>
+        <th>Contrôle Continu</th>
+        <th>Examens</th>
       </tr>
       ${rows}
     </table>
   `;
 }
+
 function showGroup08() {
   clearAll();
 
@@ -361,11 +363,11 @@ function showGroup08() {
     rows += `
       <tr>
         <td>${name}</td>
-        <td>0</td>
-        <td>—</td>
-        <td>—</td>
-        <td>—</td>
         <td>✔</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
       </tr>
     `;
   });
@@ -375,11 +377,11 @@ function showGroup08() {
     <table class="notes-table">
       <tr>
         <th>Nom & Prénom</th>
-        <th>Absences</th>
-        <th>Contrôle Continu</th>
-        <th>Interrogation</th>
-        <th>Participation</th>
         <th>Présence</th>
+        <th>Participation</th>
+        <th>Interrogation</th>
+        <th>Contrôle Continu</th>
+        <th>Examens</th>
       </tr>
       ${rows}
     </table>
