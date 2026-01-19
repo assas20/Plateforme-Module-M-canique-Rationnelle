@@ -463,6 +463,109 @@ function showGroup08() {
     </table>
   `;
 }
+btnNotes.onclick = () => {
+  clearAll();
+
+  tdContainer.innerHTML = `
+    <div class="notes-container">
+
+      <div class="group-box" onclick="showGroupNotes('G07')">
+        Groupe 07
+      </div>
+
+      <div class="group-box" onclick="showGroupNotes('G08')">
+        Groupe 08
+      </div>
+
+    </div>
+  `;
+};
+
+// دالة لحساب نقاط الحضور وفق Barème
+function calculatePresencePoints(absences) {
+  if (absences === 0) return 2;
+  if (absences === 1) return 1.5;
+  if (absences === 2) return 1;
+  if (absences === 3) return 0.5;
+  return 0;
+}
+
+// دالة عرض الجدول للمجموعتين
+function showGroupNotes(group) {
+  clearAll();
+
+  const students = group === 'G07' ? studentsG07 : studentsG08;
+  const data = group === 'G07' ? g07Data : g08Data;
+
+  // حساب الغيابات لكل طالب
+  let absencesCount = {};
+  students.forEach(s => absencesCount[s] = 0);
+
+  Object.values(data).forEach(day => {
+    day.forEach((status, idx) => {
+      const name = students[idx];
+      if (status === "Absent") absencesCount[name]++;
+    });
+  });
+
+  // نص التوضيح أعلى الجدول
+  const notesText = `
+    <div class="notes-info">
+      <p>Je propose :</p>
+      <ul>
+        <li>3 points : note de cours</li>
+        <li>17 points pour TD :
+          <ul>
+            <li>10 points pour l’interrogation</li>
+            <li>5 points pour la participation</li>
+            <li>2 points pour la présence</li>
+          </ul>
+        </li>
+      </ul>
+      <p><strong>Barème de présence :</strong></p>
+      <ul>
+        <li>0 absence = 2</li>
+        <li>1 absence = 1,5</li>
+        <li>2 absences = 1</li>
+        <li>3 absences = 0,5</li>
+        <li>4 absences et plus = 0</li>
+      </ul>
+      <p><em>Ce barème est proposé par Mme Zoudi Nabila, chargée de cours.</em></p>
+    </div>
+  `;
+
+  // إنشاء الصفوف
+  let rows = "";
+  students.forEach(name => {
+    const presencePoints = calculatePresencePoints(absencesCount[name]);
+    rows += `
+      <tr>
+        <td>${name}</td>
+        <td>${presencePoints}</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+    `;
+  });
+
+  tdContainer.innerHTML = `
+    <h2>${group}</h2>
+    ${notesText}
+    <table class="notes-table">
+      <tr>
+        <th>Nom & Prénom</th>
+        <th>Présence</th>
+        <th>Participation</th>
+        <th>Interrogation</th>
+        <th>Contrôle Continu</th>
+        <th>Examens</th>
+      </tr>
+      ${rows}
+    </table>
+  `;
+}
 
 btnProgramme.onclick=()=>showSimpleBox("Programme Pédagogique",
   `<p>Programme officiel ENSTP – CPST</p>
