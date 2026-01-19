@@ -35,6 +35,7 @@ const examTexts = {
     }
   }
 };
+const btnNotes = document.getElementById("btnNotes");
 
 const studentsG08 = [
   "Abderrezek Akram","Ameziane Sid-Ali","Belaidi Abdellatif","Benadjiel Wissam","Benali Abdallah Merouane",
@@ -284,6 +285,106 @@ btnExam.onclick = () => {
     </div>
   `;
 };
+btnNotes.onclick = () => {
+  clearAll();
+
+  tdContainer.innerHTML = `
+    <div class="notes-container">
+
+      <div class="group-box" onclick="showGroup07()">
+        Groupe 07
+      </div>
+
+      <div class="group-box" onclick="showGroup08()">
+        Groupe 08
+      </div>
+
+    </div>
+  `;
+};
+function showGroup07() {
+  clearAll();
+
+  const students07 = [
+    "Allouche Mohammed Abdellah","Belaid Wail","Ben Amor Lokmane",
+    "Benabderrahmane Tahhil Fadjer","Benkaddour Abdelkader Mahieddine",
+    "Berziga Mohamed","Boughara Achraf","Bousba Aymen","Chellali Abdessalam",
+    "Dib Nesrine","Guadi Zahra","Kadri Mourad","Khettar Azouaou",
+    "Lidi Moussa Mohamed Yacine","Maouche Abdelhak","Messaoudene Chouaib",
+    "Necibdia Abdelmouay","Ouzenati Khokha","Sari Aymen","Yahi Hadda Lyna","Zerrouga Younes"
+  ];
+
+  let rows = "";
+  students07.forEach(name => {
+    rows += `
+      <tr>
+        <td>${name}</td>
+        <td>0</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>✔</td>
+      </tr>
+    `;
+  });
+
+  tdContainer.innerHTML = `
+    <h2>Groupe 07</h2>
+    <table class="notes-table">
+      <tr>
+        <th>Nom & Prénom</th>
+        <th>Absences</th>
+        <th>Contrôle Continu</th>
+        <th>Interrogation</th>
+        <th>Participation</th>
+        <th>Présence</th>
+      </tr>
+      ${rows}
+    </table>
+  `;
+}
+function showGroup08() {
+  clearAll();
+
+  const students08 = [
+    "Abderrezek Akram","Ameziane Sid-Ali","Belaidi Abdellatif",
+    "Benadjiel Wissam","Benali Abdallah Merouane","Benguessoum Mohamed Arezki",
+    "BENKEZIM Sofiane","Biou Mohamed Amine","Bouhealouane Faiz","Bouska Chokri",
+    "Bouzar Dilmi Djihad","Chendri Zakaria","Dilmi Anes","Guehaz Sifeddine",
+    "Hamzaoui Dina","Khattab Ilyes Abdelaziz","Khiat Sarra","Larbi Maria",
+    "Mazouzi Hadil","Mezghrani Dalia","Rachidi Zakaria","Seddiki Khouloud",
+    "Smail Ziad","Yahiaoui Hamza","Ziouar Khaoula"
+  ];
+
+  let rows = "";
+  students08.forEach(name => {
+    rows += `
+      <tr>
+        <td>${name}</td>
+        <td>0</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>✔</td>
+      </tr>
+    `;
+  });
+
+  tdContainer.innerHTML = `
+    <h2>Groupe 08</h2>
+    <table class="notes-table">
+      <tr>
+        <th>Nom & Prénom</th>
+        <th>Absences</th>
+        <th>Contrôle Continu</th>
+        <th>Interrogation</th>
+        <th>Participation</th>
+        <th>Présence</th>
+      </tr>
+      ${rows}
+    </table>
+  `;
+}
 
 btnProgramme.onclick=()=>showSimpleBox("Programme Pédagogique",
   `<p>Programme officiel ENSTP – CPST</p>
