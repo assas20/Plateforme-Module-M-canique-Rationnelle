@@ -511,7 +511,7 @@ function showGroupNotes(group) {
   // نص التوضيح أعلى الجدول
   const notesText = `
     <div class="notes-info">
-      <p>Je propose :</p>
+      <p>La note de contrôle continu sera calculée comme suit :</p>
       <ul>
         <li>3 points : note de cours</li>
         <li>17 points pour TD :
