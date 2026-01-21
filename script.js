@@ -18,6 +18,11 @@ const examTexts = {
     ar: "موقع الجامعة"
   },
   universities: {
+     enstp: {
+      fr: "ENSTP",
+      en: "ENSTP",
+      ar: "المدرسة الوطنية العليا للأشغال العمومية"
+    },
     uhb: {
       fr: "Université Houari Boumediene",
       en: "Houari Boumediene University",
@@ -251,6 +256,16 @@ btnExam.onclick = () => {
 
   tdContainer.innerHTML = `
     <div class="exam-container">
+ 
+    <div class="exam-box">
+        <h3>${examTexts.universities.enstp[currentLang]}</h3>
+        <a href="examens/ENSTP_Mecanique_Rationnelle.pdf" target="_blank" class="exam-link">
+          ${examTexts.pdf[currentLang]}
+        </a>
+        <a href="https://www.enstp.edu.dz" target="_blank" class="exam-link">
+          🌐 Lien
+        </a>
+      </div>
 
       <div class="exam-box">
         <h3>${examTexts.universities.uhb[currentLang]}</h3>
