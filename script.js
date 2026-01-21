@@ -58,7 +58,7 @@ const studentsG07 = [
  * ====== بيانات الحضور ======
  ***********************************/
 const g08Data = {
-  "28/10/2025":["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Absent","Présent","Absence Justifiée","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent"],
+  "28/10/2025":["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Absent","Présent","Absence Justifiée","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
   "04/11/2025":["Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Absent","Présent","Absent","Absent","Absent","Présent","Présent","Présent","Présent","Présent","Présent"],
   "11/11/2025":Array(25).fill("Présent"),
   "18/11/2025":["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
