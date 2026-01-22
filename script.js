@@ -94,75 +94,18 @@ const g07Data = {
  ***********************************/
 const TDs = {
   S03:[
-    { 
-      title: {
-        fr: `Série TD <span style="color:red">N°01</span> : Les outils mathématiques`,
-        en: `Tutorial Sheet <span style="color:red">N°01</span>: Math Tools`,
-        ar: `السلسلة <span style="color:red">01</span>: الأدوات الرياضية`
-      }, 
-      pdf:"TDs/TD01.pdf", html:"TDs/TD01.html" 
-    },
-    { 
-      title: {
-        fr: `Série TD <span style="color:red">N°02</span> : Moments des forces`,
-        en: `Tutorial Sheet <span style="color:red">N°02</span>: Moments of Forces`,
-        ar: `السلسلة <span style="color:red">02</span>: عزم القوى`
-      }, 
-      pdf:"TDs/TD02.pdf", html:"TDs/TD02.html" 
-    },
-    { 
-      title: {
-        fr: `Série TD <span style="color:red">N°03</span> : Les Torseurs`,
-        en: `Tutorial Sheet <span style="color:red">N°03</span>: Torques`,
-        ar: `السلسلة <span style="color:red">03</span>: العزوم`
-      }, 
-      pdf:"TDs/TD03.pdf", html:"TDs/TD03.html" 
-    },
-    { 
-      title: {
-        fr: `Série TD <span style="color:red">N°04</span> : Statique du solide`,
-        en: `Tutorial Sheet <span style="color:red">N°04</span>: Solid Statics`,
-        ar: `السلسلة <span style="color:red">04</span>: سكون الصلب`
-      }, 
-      pdf:"TDs/TD04.pdf", html:"TDs/TD04.html" 
-    }
+    { title: {fr:"Série TD N°01 : Les outils mathématiques", en:"TD Series 01: Math Tools", ar:"السلسلة 01: الأدوات الرياضية"}, pdf:"TDs/TD01.pdf", html:"TDs/TD01.html" },
+    { title: {fr:"Série TD N°02 : Moments des forces", en:"TD Series 02: Moments of Forces", ar:"السلسلة 02: عزم القوى"}, pdf:"TDs/TD02.pdf", html:"TDs/TD02.html" },
+    { title: {fr:"Série TD N°03 : Les Torseurs", en:"TD Series 03: Torques", ar:"السلسلة 03: العزوم"}, pdf:"TDs/TD03.pdf", html:"TDs/TD03.html" },
+    { title: {fr:"Série TD N°04 : Statique du solide", en:"TD Series 04: Solid Statics", ar:"السلسلة 04: سكون الصلب"}, pdf:"TDs/TD04.pdf", html:"TDs/TD04.html" }
   ],
   S04:[
-    { 
-      title: {
-        fr: `Série TD <span style="color:red">N°05</span> : Exemple TD 05`,
-        en: `Tutorial Sheet <span style="color:red">N°05</span>: Example TD 05`,
-        ar: `السلسلة <span style="color:red">05</span>: مثال TD 05`
-      }, 
-      pdf:"TDs/TD05.pdf", html:"TDs/TD05.html" 
-    },
-    { 
-      title: {
-        fr: `Série TD <span style="color:red">N°06</span> : Exemple TD 06`,
-        en: `Tutorial Sheet <span style="color:red">N°06</span>: Example TD 06`,
-        ar: `السلسلة <span style="color:red">06</span>: مثال TD 06`
-      }, 
-      pdf:"TDs/TD06.pdf", html:"TDs/TD06.html" 
-    },
-    { 
-      title: {
-        fr: `Série TD <span style="color:red">N°07</span> : Exemple TD 07`,
-        en: `Tutorial Sheet <span style="color:red">N°07</span>: Example TD 07`,
-        ar: `السلسلة <span style="color:red">07</span>: مثال TD 07`
-      }, 
-      pdf:"TDs/TD07.pdf", html:"TDs/TD07.html" 
-    },
-    { 
-      title: {
-        fr: `Série TD <span style="color:red">N°08</span> : Exemple TD 08`,
-        en: `Tutorial Sheet <span style="color:red">N°08</span>: Example TD 08`,
-        ar: `السلسلة <span style="color:red">08</span>: مثال TD 08`
-      }, 
-      pdf:"TDs/TD08.pdf", html:"TDs/TD08.html" 
-    }
+    { title: {fr:"Série TD N°05 : Exemple TD 05", en:"TD Series 05: Example TD 05", ar:"السلسلة 05: مثال TD 05"}, pdf:"TDs/TD05.pdf", html:"TDs/TD05.html" },
+    { title: {fr:"Série TD N°06 : Exemple TD 06", en:"TD Series 06: Example TD 06", ar:"السلسلة 06: مثال TD 06"}, pdf:"TDs/TD06.pdf", html:"TDs/TD06.html" },
+    { title: {fr:"Série TD N°07 : Exemple TD 07", en:"TD Series 07: Example TD 07", ar:"السلسلة 07: مثال TD 07"}, pdf:"TDs/TD07.pdf", html:"TDs/TD07.html" },
+    { title: {fr:"Série TD N°08 : Exemple TD 08", en:"TD Series 08: Example TD 08", ar:"السلسلة 08: مثال TD 08"}, pdf:"TDs/TD08.pdf", html:"TDs/TD08.html" }
   ]
 };
-
 /***********************************
  * ====== Videos ======
  ***********************************/
@@ -237,7 +180,6 @@ function showTDSerie(arrTD) {
           </p>
         </div>
       `;
-      tdContainer.querySelector("h3").innerHTML = td.title[currentLang];
     };
     tdContainer.appendChild(btn);
   });
