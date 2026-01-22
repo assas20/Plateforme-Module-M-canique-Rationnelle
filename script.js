@@ -167,7 +167,7 @@ function showTDSerie(arrTD) {
   clearAll();
   arrTD.forEach(td => {
     const btn = document.createElement("button");
-    btn.style.color = "red";  // ← اللون الأحمر لكل TD
+    
     btn.className = "td-btn";
     btn.textContent = td.title[currentLang];
     btn.onclick = () => {
