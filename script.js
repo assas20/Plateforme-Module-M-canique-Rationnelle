@@ -169,7 +169,10 @@ function showTDSerie(arrTD) {
     const btn = document.createElement("button");
     
     btn.className = "td-btn";
-    btn.textContent = td.title[currentLang];
+    const titleText = td.title[currentLang];
+const newTitle = titleText.replace(/^Série TD N°(\d+)/, '<span class="serie-red">Série TD N°$1</span>');
+btn.innerHTML = newTitle;
+
     btn.onclick = () => {
       tdContainer.innerHTML = `
         <div class="td-detail">
