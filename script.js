@@ -206,31 +206,67 @@ btnListe.onclick=()=>{
 };
 
 function renderTable(data, group, container){
-  container.innerHTML="";
-  const table=document.createElement("table");
-  const students=group==="G08"?studentsG08:studentsG07;
-  let abs={}; students.forEach(s=>abs[s]=0);
+  container.innerHTML = "";
+
+  const table = document.createElement("table");
+  const students = group === "G08" ? studentsG08 : studentsG07;
+  let abs = {};
+  students.forEach(s => abs[s] = 0);
+
+  // ترجمة حالة الحضور
+  const translations = {
+    Present: { fr: "Présent", en: "Present", ar: "حاضر" },
+    Absent: { fr: "Absent", en: "Absent", ar: "غائب" },
+    Justified: { fr: "Absence Justifiée", en: "Justified", ar: "غياب مبرر" },
+    Holiday: { fr: "Vacances", en: "Holiday", ar: "عطلة" }
+  };
 
   // Header
-  let head="<tr><th>#</th><th>Nom</th>";
-  Object.keys(data).forEach(d=>head+=`<th>${d}</th>`);
-  head+="</tr>";
-  table.innerHTML=head;
+  let head = "<tr><th>#</th><th>Nom</th>";
+  Object.keys(data).forEach(d => head += `<th>${d}</th>`);
+  head += "</tr>";
+  table.innerHTML = head;
 
-  students.forEach((s,i)=>{
-    let row=`<tr><td>${i+1}</td><td>${s}</td>`;
-    Object.keys(data).forEach(d=>{
-      let raw=data[d][i]||"Présent";
-      let key=raw==="Absent"?"Absent":raw==="Absence Justifiée"?"Justified":raw==="Holiday"?"Holiday":"Present";
-      if(key==="Absent") abs[s]++;
-      let warning=abs[s]>3?`<br>⚠️ L'étudiant a dépassé le nombre légal d'absences (3) selon le décret ministériel n°1165 du 04/10/2025.`:"";
-      row+=`<td class="status-${key}">${key}${warning}</td>`;
+  // الصفوف
+  students.forEach((s, idx) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${idx + 1}</td><td>${s}</td>`;
+
+    Object.keys(data).forEach(date => {
+      const raw = data[date][idx] || "Présent";
+      const key = raw === "Présent" ? "Present" :
+                  raw === "Absent" ? "Absent" :
+                  raw === "Absence Justifiée" ? "Justified" : "Holiday";
+
+      if (key === "Absent") abs[s]++;
+
+      const warning = abs[s] > 3 ? `<br>⚠️ L'étudiant a dépassé le nombre légal d'absences (3) selon le décret ministériel n°1165 du 04/10/2025.` : "";
+
+      // إنشاء محتوى الخلية
+      let tdContent = translations[key][currentLang] + warning;
+
+      // إذا كان الغياب مبرراً، أضف رابط PDF
+      if (key === "Justified") {
+        const fileName = `justificatifs/${group}/${s.replace(/ /g,"_")}_${date.replace(/\//g,"-")}.pdf`;
+        const linkText = currentLang === "fr" ? "📎 Voir le justificatif" :
+                         currentLang === "en" ? "📎 Justified PDF" :
+                         "📎 مبرر الغياب";
+        tdContent += `<br><a href="${fileName}" target="_blank" class="justif-link">${linkText}</a>`;
+      }
+
+      const td = document.createElement("td");
+      td.className = `status-${key.toLowerCase()}`;
+      td.innerHTML = tdContent;
+
+      tr.appendChild(td);
     });
-    row+="</tr>";
-    table.innerHTML+=row;
+
+    table.appendChild(tr);
   });
+
   container.appendChild(table);
 }
+
 
 /***********************************
  * ====== الدروس والبرامج والكتب والفيديو ======
