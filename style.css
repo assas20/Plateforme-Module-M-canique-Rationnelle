@@ -129,3 +129,6 @@ th { background:#004080; color:white; position:sticky; top:0; }
 .status-justified a:hover {
   color: #ff6600;
 }
+.status-present { background-color: #c8e6c9; }   /* أخضر */
+.status-absent { background-color: #ffcdd2; }    /* أحمر */
+.status-justified { background-color: #fff9c4; } /* أصفر */
