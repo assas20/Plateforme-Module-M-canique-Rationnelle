@@ -237,6 +237,7 @@ function showTDSerie(arrTD) {
           </p>
         </div>
       `;
+      tdContainer.querySelector("h3").innerHTML = td.title[currentLang];
     };
     tdContainer.appendChild(btn);
   });
