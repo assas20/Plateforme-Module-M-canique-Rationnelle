@@ -238,14 +238,9 @@ function renderTable(data, group, container){
                   raw === "Absent" ? "Absent" :
                   raw === "Absence Justifiée" ? "Justified" : "Holiday";
 
-      if(key==="Absent") abs[s]++;
-      if(abs[s]>3){
-        const warning=document.createElement("span");
-        warning.className="warning";
-        warning.textContent="⚠️ L'étudiant a dépassé le nombre légal d'absences (3) selon le décret ministériel n°1165 du 04/10/2025.";
-        tr.cells[1].appendChild(document.createElement("br"));
-        tr.cells[1].appendChild(warning);
-      } "";
+      if (key === "Absent") abs[s]++;
+
+      const warning = abs[s] > 3 ? `<br>⚠️ L'étudiant a dépassé le nombre légal d'absences (3) selon le décret ministériel n°1165 du 04/10/2025.` : "";
 
       // إنشاء محتوى الخلية
       let tdContent = translations[key][currentLang] + warning;
