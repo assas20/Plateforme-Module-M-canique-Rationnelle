@@ -12,7 +12,7 @@ header .logo { width:200px; margin-bottom:0px; }
 .assas-name { color: #d32f2f; font-weight: bold; }
 
 /* TD Buttons */
-.td-btn { background:#ffccd0; color:#004080; font-weight:bold; padding:10px; margin:5px; border-radius:8px; border:1px solid #004080; cursor:pointer; text-align:left; width:100%; }
+.td-btn { background:#ccd8ff; color:#f7f8f8; font-weight:bold; padding:10px; margin:5px; border-radius:8px; border:1px solid #004080; cursor:pointer; text-align:left; width:100%; }
 .td-detail { background:#fff; border:1px solid #ddd; padding:10px; margin:5px 0; border-radius:5px; }
 .td-detail a { color:#004080; text-decoration:none; font-weight:bold; }
 .td-detail a:hover { text-decoration:underline; }
