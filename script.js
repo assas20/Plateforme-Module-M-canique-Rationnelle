@@ -85,7 +85,7 @@ const g07Data = {
   "25/11/2025":["Présent","Présent","Absent","Présent","Absent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Absence Justifiée","Présent","Présent","Présent","Présent","Présent","Présent"],
   "02/12/2025":["Présent","Présent","Absence Justifiée","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
   "09/12/2025":Array(21).fill("Présent"),
-  "16/12/2025":["Absence Justifiée","Absence Justifiée","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Absent","Absent","Absent","Présent","Présent","Présent","Absent"],
+  "16/12/2025":["Absence Justifiée","Absence Justifiée","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Absent","Absent","Présent","Présent","Présent","Absent"],
   "06/01/2026":Array(21).fill("Présent"),
   "13/01/2026":["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Absent","Présent","Présent","Présent","Absent"]
 };
