@@ -542,12 +542,66 @@ function calculatePresencePoints(absences) {
   return 0;
 }
 
-// دالة عرض الجدول للمجموعتين
+// بيانات نقاط الطلاب
+const dataG07 = [
+    ["1", "Allouche Mohammed Abdellah", "07,5", "9,50"],
+    ["2", "Belaid Wail", "-", "10,50"],
+    ["3", "Ben Amor Lokmane", "05,25", "09,50"],
+    ["4", "Benabderrahmane T. Fadjer", "05", "06,25"],
+    ["5", "Benkaddour A. Mahieddine", "04", "08,75"],
+    ["6", "Berziga Mohamed", "03,75", "10,25"],
+    ["7", "Boughara Achraf", "-", "02"],
+    ["8", "Bousba Aymen", "03,25", "03"],
+    ["9", "Chellali Abdessalam", "02,25", "01,5"],
+    ["10", "Dib Nesrine", "01,25", "08,25"],
+    ["11", "Guadi Zahra", "02,25", "09"],
+    ["12", "Kadri Mourad", "01,75", "04,50"],
+    ["13", "Khettar Azouaou", "05", "03"],
+    ["14", "Lidi Moussa Mohamed Yacine", "09", "14"],
+    ["15", "Maouche Abdelhak", "04", "13"],
+    ["16", "Messaoudene Chouaib", "01,50", "02"],
+    ["17", "Necibdia Abdelmouay", "02,50", "03,25"],
+    ["18", "Ouzenati Khokha", "04", "06,75"],
+    ["19", "Sari Aymen", "08,50", "02,25"],
+    ["20", "Yahi Hadda Lyna", "04,50", "03"],
+    ["21", "Zerrouga Younes", "01,75", "01,25"]
+];
+
+const dataG08 = [
+    ["1", "Abderrezek Akram", "02,50", "05,25"],
+    ["2", "Ameziane Sid-Ali", "01,25", "06,50"],
+    ["3", "Belaidi Abdellatif", "02", "06"],
+    ["4", "Benadjiel Wissam", "09", "03,50"],
+    ["5", "Benali Abdallah Merouane", "07,50", "06"],
+    ["6", "Benguessoum M. Arezki",  "06,25", "05,75"],
+    ["7", "BENKEZIM Sofiane", "06,50", "04,50"],
+    ["8", "Biou Mohamed Amine", "03", "04,50"],
+    ["9", "Bouhcalouane Faiz", "03", "09,50"],
+    ["10", "Bouska Chokri", "02,75", "07,75"],
+    ["11", "Bouzar Dilmi Djihad", "07", "07,50"],
+    ["12", "Chendri Zakaria", "04", "15,25"],
+    ["13", "Dilmi Anes", "02,25", "03,50"],
+    ["14", "Guehaz Sifeddine", "07", "12,50"],
+    ["15", "Hamzaoui Dina", "05,50", "02,50"],
+    ["16", "Khattab Ilyes Abdelaziz", "04", "01"],
+    ["17", "Khiat Sarra", "1,75", "10,50"],
+    ["18", "Larbi Maria", "Absente", "Absente"],
+    ["19", "Mazouzi Hadil", "04", "07,75"],
+    ["20", "Mezghrani Dalia", "02,50", "07"],
+    ["21", "Rachidi Zakaria", "08", "13,75"],
+    ["22", "Seddiki Khouloud", "03,50", "06,25"],
+    ["23", "Small Ziad", "02", "05,75"],
+    ["24", "Yahiaoui Hamza", "06", "7.75"],
+    ["25", "Ziouar Khaoula", "03", "05,25"]
+];
+
+// تعديل دالة showGroupNotes
 function showGroupNotes(group) {
   clearAll();
 
   const students = group === 'G07' ? studentsG07 : studentsG08;
   const data = group === 'G07' ? g07Data : g08Data;
+  const notesData = group === 'G07' ? dataG07 : dataG08;
 
   // حساب الغيابات لكل طالب
   let absencesCount = {};
@@ -586,18 +640,21 @@ function showGroupNotes(group) {
     </div>
   `;
 
-  // إنشاء الصفوف
+  // إنشاء الصفوف مع Interrogation و Examens
   let rows = "";
-  students.forEach(name => {
+  students.forEach((name, idx) => {
     const presencePoints = calculatePresencePoints(absencesCount[name]);
+    const noteInterrogation = notesData[idx][2];
+    const noteExamen = notesData[idx][3];
+
     rows += `
       <tr>
         <td>${name}</td>
         <td>${presencePoints}</td>
         <td>—</td>
+        <td>${noteInterrogation}</td>
         <td>—</td>
-        <td>—</td>
-        <td>—</td>
+        <td>${noteExamen}</td>
       </tr>
     `;
   });
