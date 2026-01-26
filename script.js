@@ -385,12 +385,12 @@ function showGroup07() {
     <h2>Groupe 07</h2>
     <table class="notes-table">
       <tr>
-         <th>Nom & Prénom</th>
-        <th>Présence /02</th>
-        <th>Participation /05</th>
-        <th>Interrogation /05</th>
-        <th>Contrôle Continu /20</th>
-        <th>Examens /20</th>
+        <th>Nom & Prénom</th>
+        <th>Présence</th>
+        <th>Participation</th>
+        <th>Interrogation</th>
+        <th>Contrôle Continu</th>
+        <th>Examens</th>
       </tr>
       ${rows}
     </table>
@@ -461,12 +461,12 @@ function showGroupNotes(group) {
     <h2>${group}</h2>
     <table class="notes-table">
       <tr>
-        <th>Nom & Prénom</th>
-        <th>Présence</th>
-        <th>Participation</th>
-        <th>Interrogation</th>
-        <th>Contrôle Continu</th>
-        <th>Examens</th>
+         <th>Nom & Prénom</th>
+        <th>Présence /02</th>
+        <th>Participation /05</th>
+        <th>Interrogation /05</th>
+        <th>Contrôle Continu /20</th>
+        <th>Examens /20</th>
       </tr>
       ${rows}
     </table>
