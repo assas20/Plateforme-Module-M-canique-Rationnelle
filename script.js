@@ -555,7 +555,7 @@ const dataG07 = [
     ["10", "Dib Nesrine", "01,75", "08,25"],
     ["11", "Guadi Zahra", "02,25", "09.50"],
     ["12", "Kadri Mourad", "3.25", "5.25"],
-    ["13", "Khettar Azouaou", "06", "03"],
+    ["13", "Khettar Azouaou", "06", "03.50"],
     ["14", "Lidi Moussa Mohamed Yacine", "09.50", "14"],
     ["15", "Maouche Abdelhak", "04", "13"],
     ["16", "Messaoudene Chouaib", "01,50", "02.75"],
