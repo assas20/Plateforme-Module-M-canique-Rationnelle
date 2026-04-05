@@ -99,7 +99,7 @@ const TDs = {
     { title: {fr:"Série TD N°04 : Statique du solide", en:"TD Series 04: Solid Statics", ar:"السلسلة 04: سكون الصلب"}, pdf:"TDs/TD04.pdf", html:"TDs/TD04.html" }
   ],
   S04:[
-    { title: {fr:"Série TD N°05 : Exemple TD 05", en:"TD Series 05: Example TD 05", ar:"السلسلة 05: مثال TD 05"}, pdf:"TDs/TD05.pdf", html:"TDs/TD05.html" },
+    { title: {fr:"Série TD N°05 : CINEMATIQUE DU SOLIDE", en:"TD Series 05: kinematics of rigid body", ar:"السلسلة 05: مثال TD 05"}, pdf:"TDs/TD05.pdf", html:"TDs/TD05.html" },
     { title: {fr:"Série TD N°06 : Exemple TD 06", en:"TD Series 06: Example TD 06", ar:"السلسلة 06: مثال TD 06"}, pdf:"TDs/TD06.pdf", html:"TDs/TD06.html" },
     { title: {fr:"Série TD N°07 : Exemple TD 07", en:"TD Series 07: Example TD 07", ar:"السلسلة 07: مثال TD 07"}, pdf:"TDs/TD07.pdf", html:"TDs/TD07.html" },
     { title: {fr:"Série TD N°08 : Exemple TD 08", en:"TD Series 08: Example TD 08", ar:"السلسلة 08: مثال TD 08"}, pdf:"TDs/TD08.pdf", html:"TDs/TD08.html" }
