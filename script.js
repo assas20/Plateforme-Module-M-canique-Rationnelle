@@ -59,6 +59,48 @@ const studentsG07 = [
   "Necibdia Abdelmouay","Ouzenati Khokha","Sari Aymen","Yahi Hadda Lyna","Zerrouga Younes"
 ];
 
+const studentsG14 = [
+  "ABDELLAOU MOHAMED DJABER","AHMED MESSAOUD AKRAM","AYAD ABDERRAHMANE",
+  "BELHAMEL MOHAMMED DHIA EDDINE","BENALLA WISSAME","BENATTA TAHA ELOUALID",
+  "BENYAHIA RIYAD","BOUBEZARI Yasmine","BOUKHEDIMI ABDELMADJID",
+  "BOUTRAB ABDERRAHMANE","CHETTATA OUSSAMA","DOULI YASMINA",
+  "HADDAR SACI","HIDRI Chaima","KELAI RABAH",
+  "KOULAL RAHIL","LAGOUN NOUHA ARWA","MADOURI FATMA",
+  "MEGHERBI Douaa sara","MOKHTAR RAHMANI KHALED","OUAHLIMA LYDIA          (+1)",
+  "RAHMOUN Imad eddine billal","ROUANI Aymene","SEKKAI HICHEM MOHCEN",
+  "YOUSFI MAYA"
+];
+const studentsG06 = [
+  "ABDELMADJID YOUSRA","ALIOUAT BOUCHRA KHOULOUD","BEKTACHE VANISSA      (+02)",
+  "BELGHIT CHANEZ","BENABDERRAHMANE MOUSSA ABDELBARI","BENHADOUCHE MANAL",
+  "BENTCHAKAL MANAR","BOUFERKAS ISLAM","BOUSALEM ISRAA",
+  "CHEBBAH Mohamed abderrahime","CHOUCHAR RAZINE","DHAIRI ANES",
+  "GHERNAOUT AHMED RAYAN","HARROUCHE MOUNIR","KADDOUS M'HAMED EL KHAOUNI",
+  "KHELIFI AHMED YASSER","LAMINE MOHAMMED","LAMRAOUI CHAMS EDDINE",
+  "MANSOURI Younes","MESSALHI MOHAMED ABDEL KADDOUS","MORSLI KHALIL",
+  "NAIB YOUCEF WALID","OUMEZAOUCHE YAHIA ZAKARIA","ROUABHIA Fedoua",
+  "SALHI ANIS    (+01)","SID AHMED NOR ELHOUDA","TOUNSI ABDELDJALIL    (+01)",
+  "ZEREG Rawane"
+];
+const studentsG13 = [
+  "AFRAOUI HIBA","AYACHE EL BACHIR","AZIRI WASSIM",
+  "BELHACHEMI OUSSAMA","BENAMRANE ABDALLAH","BOUBESSIT SIDAHMED",
+  "BOUKHEDENNA ABDERRAHMANE","BOUTIBA TASNIM","CHERIK Aymen riad",
+  "DOUINI SALMA FARAH","HACHANI HIBA EL RAHMANE","HAMIDOUCHE HAMZA",
+  "HERIZI AHMED","KOULAL AICHA AMINA","MADANI AHMED",
+  "MEDJDOUB ANES AMMAR","MOHRI Razika","OUACHEM RAHMA",
+  "OUANANI KAMEL","SEHILI TAHA ABDERRAHMANE","TAIBI MOHAMMED RIYADH"
+];
+const studentsG05 = [
+  "ALALEI MOHAMED YAHYA    (+02)","BEKRI ABDENNOUR","BEN ABDI Soulef",
+  "BEN OMAR MOHAMED YAKOUB","BERRAHMA MOHAMED","BOUDJERDA Ahmed amine",
+  "BOUROUH MOHAMMED SADEK","CHAIMA ABDELHAK","GHERBI BADR",
+  "HADJALI Mohamed hamza","HAMIDANI ABDELKRIM ANAS","KACI Touba",
+  "KHELIFA AYOUB","LAMARI DJABER ABD ELKADDOUS","MALLEM IKRAM         (+01)",
+  "MERDASSI Mohamed zine el islam","NABTI MOHAMED AMINE","OULDALI Mustapha adlane              (+01)",
+  "SALHI ALI","SI YOUCEF ASMA","TAMENDJARI MEHDI",
+  "TIGUERCHA REZIKA","ZEMMOURI MOHAMED YACINE"
+];
 /***********************************
  * ====== بيانات الحضور ======
  ***********************************/
@@ -88,6 +130,29 @@ const g07Data = {
 
   "13/01/2026":["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Absent","Présent","Présent","Présent","Absent"]
 };
+
+const g14Data = {
+  "11/04/2026":["Absent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Absent","Présent","Présent","Présent"],
+  "18/04/2026":["Absent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Absent","Présent","Absent","Absent","Présent","Absent","Présent","Présent","Présent"],
+  "25/04/2026":["Absent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Absent","Présent","Présent","Absent","Présent","Absent","Présent","Absent","Présent"]
+};
+const g06Data = {
+
+  "11/04/2026":["Présent","Absent","Présent","Présent","Présent","Présent","Présent","Absent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
+  "18/04/2026":Array(28).fill("Présent"), // الكل حاضر
+  "25/04/2026":["Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent"]
+};
+const g13Data = {
+  
+  "11/04/2026": ["Présent","Présent","Absent","Absent","Absent","Absent","Présent","Présent","Absent","Absent","Présent","Présent","Présent","Présent","Absent","Absent","Présent","Présent","Présent","Présent","Présent"],
+  "18/04/2026": ["Présent","Présent","Absent","Absent","Présent","Absent","Absent","Présent","Présent","Absent","Présent","Absent","Présent","Absence Justifiée","Présent","Présent","Présent","Présent","Absent","Présent","Présent"],
+  "25/04/2026": ["Présent","Absent","Absent","Présent","Absent","Absent","Absent","Présent","Présent","Absent","Présent","Absent","Absent","Présent","Présent","Absent","Absent","Absent","Présent","Absent","Présent"]
+};
+const g05Data = {
+  "11/04/2026": ["Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
+  "18/04/2026": ["Présent","Absent","Absent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent"],
+  "25/04/2026": ["Présent","Présent","Absent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Absent","Présent","Présent","Absent","Présent","Présent","Présent","Présent"]
+};
 /***********************************
  * ====== TDs + PDF ====== 
  ***********************************/
@@ -100,7 +165,7 @@ const TDs = {
   ],
   S04:[
     { title: {fr:"Série TD N°05 : CINEMATIQUE DU SOLIDE", en:"TD Series 05: kinematics of rigid body", ar:"السلسلة 05: حركية الجسم الصلب TD 05"}, pdf:"TDs/TD05.pdf", html:"TDs/TD05.html", corrigePdf: "TDs/TD05_corrige.pdf" },
-    { title: {fr:"Série TD N°06 : Exemple TD 06", en:"TD Series 06: Example TD 06", ar:"السلسلة 06: مثال TD 06"}, pdf:"TDs/TD06.pdf", html:"TDs/TD06.html" },
+    { title: {fr:"Série TD N°06 : Geometry of Mass", en:"TD Series 06: Geometry of Mass", ar:"السلسلة 06: مثال TD 06"}, pdf:"TDs/TD06.pdf", html:"TDs/TD06.html", corrigePdf: "TDs/TD06_corrige.pdf" },
     { title: {fr:"Série TD N°07 : Exemple TD 07", en:"TD Series 07: Example TD 07", ar:"السلسلة 07: مثال TD 07"}, pdf:"TDs/TD07.pdf", html:"TDs/TD07.html" },
     { title: {fr:"Série TD N°08 : Exemple TD 08", en:"TD Series 08: Example TD 08", ar:"السلسلة 08: مثال TD 08"}, pdf:"TDs/TD08.pdf", html:"TDs/TD08.html" }
   ]
@@ -197,7 +262,7 @@ btnS04.onclick = () => showTDSerie(TDs.S04);
  ***********************************/
 btnListe.onclick=()=>{
   clearAll();
-  ["G08","G07"].forEach(group=>{
+  ["G08","G07","G14","G06","G13","G05"].forEach(group=>{
     const btn=document.createElement("button");
     btn.className="collapsible";
     btn.textContent=group;
@@ -207,15 +272,31 @@ btnListe.onclick=()=>{
     presenceContainer.appendChild(wrap);
 
     btn.onclick=()=>wrap.style.display=(wrap.style.display==="block"?"none":"block");
-    renderTable(group==="G08"?g08Data:g07Data,group,wrap);
-  });
+renderTable(
+ group === "G08" ? g08Data :
+  group === "G07" ? g07Data :
+  group === "G14" ? g14Data :
+  group === "G06" ? g06Data :
+   group === "G13" ? g13Data : g05Data,
+  group, wrap
+
+);  });
 };
 
-function renderTable(data, group, container){
+function renderTable(data, group, container) {
   container.innerHTML = "";
 
   const table = document.createElement("table");
-  const students = group === "G08" ? studentsG08 : studentsG07;
+  
+  // تحديد قائمة الطلاب حسب المجموعة
+let students;
+if (group === "G08") students = studentsG08;
+else if (group === "G07") students = studentsG07;
+else if (group === "G14") students = studentsG14;
+else if (group === "G06") students = studentsG06;
+else if (group === "G13") students = studentsG13;
+else if (group === "G05") students = studentsG05;
+  
   let abs = {};
   students.forEach(s => abs[s] = 0);
 
@@ -227,13 +308,13 @@ function renderTable(data, group, container){
     Holiday: { fr: "Vacances", en: "Holiday", ar: "عطلة" }
   };
 
-  // Header
+  // رأس الجدول
   let head = "<tr><th>#</th><th>Nom</th>";
   Object.keys(data).forEach(d => head += `<th>${d}</th>`);
   head += "</tr>";
   table.innerHTML = head;
 
-  // الصفوف
+  // صفوف الطلاب
   students.forEach((s, idx) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `<td>${idx + 1}</td><td>${s}</td>`;
@@ -246,12 +327,13 @@ function renderTable(data, group, container){
 
       if (key === "Absent") abs[s]++;
 
-      const warning = abs[s] > 3 ? `<br>⚠️ L'étudiant a dépassé le nombre légal d'absences (3) selon le décret ministériel n°1165 du 04/10/2025.` : "";
+      const warning = abs[s] > 3 
+        ? `<br>⚠️ L'étudiant a dépassé le nombre légal d'absences (3) selon le décret ministériel n°1165 du 04/10/2025.` 
+        : "";
 
-      // إنشاء محتوى الخلية
       let tdContent = translations[key][currentLang] + warning;
 
-      // إذا كان الغياب مبرراً، أضف رابط PDF
+      // رابط مبرر الغياب
       if (key === "Justified") {
         const fileName = `justificatifs/${group}/${s.replace(/ /g,"_")}_${date.replace(/\//g,"-")}.pdf`;
         const linkText = currentLang === "fr" ? "📎 Voir le justificatif" :
@@ -263,7 +345,6 @@ function renderTable(data, group, container){
       const td = document.createElement("td");
       td.className = `status-${key.toLowerCase()}`;
       td.innerHTML = tdContent;
-
       tr.appendChild(td);
     });
 
@@ -627,7 +708,7 @@ function showGroupNotes(group) {
         <li>3 points : note de cours</li>
         <li>17 points pour TD :
           <ul>
-            <li>10 points pour l’interrogation</li>
+            <li>10 points pour l'interrogation</li>
             <li>5 points pour la participation</li>
             <li>2 points pour la présence</li>
           </ul>
