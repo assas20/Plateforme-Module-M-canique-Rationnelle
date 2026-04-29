@@ -154,6 +154,23 @@ const g05Data = {
   "25/04/2026": ["Présent","Présent","Absent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Absent","Présent","Présent","Absent","Présent","Présent","Présent","Présent"]
 };
 /***********************************
+ * ====== بيانات الحضور السداسي الثاني S2 ======
+ ***********************************/
+const g07DataS2 = {
+  "17/03/2026": ["Absent","Absent","Absent","Présent","Absent","Absence Justifiée","Présent","Présent","Absent","Absent","Absent","Présent","Présent","Absent","Absence Justifiée","Absent","Présent","Présent","Présent","Absent","Absent"],
+  "07/04/2026": ["Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
+  "14/04/2026": ["Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent"],
+  "21/04/2026": ["Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Absence Justifiée","Présent","Présent","Absent","Absent"],
+  "28/04/2026": ["Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"]
+};
+
+const g08DataS2 = {
+  "17/03/2026": ["Présent","Présent","Présent","Présent","Absent","Présent","Absent","Absent","Présent","Absent","Présent","Présent","Présent","Absent","Présent","Absent","Absent","Présent","Présent","Présent","Absent","Présent","Absent","Absent","Absent"],
+  "07/04/2026": ["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
+  "14/04/2026": ["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
+  "21/04/2026": ["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent"]
+};
+/***********************************
  * ====== TDs + PDF ====== 
  ***********************************/
 const TDs = {
@@ -210,7 +227,7 @@ const btnVideo = document.getElementById("btnVideo");
 const btnContact = document.getElementById("btnContact");
 
 let currentLang = "fr";
-
+let currentSemester = "S1";
 /***********************************
  * ====== الأدوات العامة ======
  ***********************************/
@@ -260,27 +277,63 @@ btnS04.onclick = () => showTDSerie(TDs.S04);
 /***********************************
  * ====== عرض الحضور ======
  ***********************************/
-btnListe.onclick=()=>{
+btnListe.onclick = () => {
   clearAll();
-  ["G08","G07","G14","G06","G13","G05"].forEach(group=>{
-    const btn=document.createElement("button");
-    btn.className="collapsible";
-    btn.textContent=group;
-    const wrap=document.createElement("div");
-    wrap.className="table-wrapper";
-    presenceContainer.appendChild(btn);
-    presenceContainer.appendChild(wrap);
+  
+  const semDiv = document.createElement("div");
+  semDiv.style.marginBottom = "15px";
+  semDiv.innerHTML = `
+    <label style="font-weight:bold; margin-right:10px;">
+      ${currentLang === "fr" ? "Semestre :" : currentLang === "en" ? "Semester :" : "السداسي :"}
+    </label>
+    <select id="semesterSelect" style="padding:5px; font-size:16px;">
+      <option value="S1">S1</option>
+      <option value="S2">S2</option>
+    </select>
+  `;
+  presenceContainer.appendChild(semDiv);
+  
+  const groupsWrap = document.createElement("div");
+  groupsWrap.id = "groupsWrap";
+  presenceContainer.appendChild(groupsWrap);
+  
+  function renderGroups() {
+    groupsWrap.innerHTML = "";
+    
+    // ← G05/G06/G13/G14 تظهر فقط في S2
+    const groups = currentSemester === "S1" 
+      ? ["G08", "G07"] 
+      : ["G08", "G07", "G14", "G06", "G13", "G05"];
+    
+    groups.forEach(group => {
+      const btn = document.createElement("button");
+      btn.className = "collapsible";
+      btn.textContent = group + " - " + currentSemester;
+      const wrap = document.createElement("div");
+      wrap.className = "table-wrapper";
+      groupsWrap.appendChild(btn);
+      groupsWrap.appendChild(wrap);
 
-    btn.onclick=()=>wrap.style.display=(wrap.style.display==="block"?"none":"block");
-renderTable(
- group === "G08" ? g08Data :
-  group === "G07" ? g07Data :
-  group === "G14" ? g14Data :
-  group === "G06" ? g06Data :
-   group === "G13" ? g13Data : g05Data,
-  group, wrap
-
-);  });
+      btn.onclick = () => wrap.style.display = (wrap.style.display === "block" ? "none" : "block");
+      
+      let data;
+      if (group === "G08") data = currentSemester === "S1" ? g08Data : g08DataS2;
+      else if (group === "G07") data = currentSemester === "S1" ? g07Data : g07DataS2;
+      else if (group === "G14") data = g14Data;
+      else if (group === "G06") data = g06Data;
+      else if (group === "G13") data = g13Data;
+      else if (group === "G05") data = g05Data;
+      
+      renderTable(data, group, wrap);
+    });
+  }
+  
+  renderGroups();
+  
+  document.getElementById("semesterSelect").onchange = (e) => {
+    currentSemester = e.target.value;
+    renderGroups();
+  };
 };
 
 function renderTable(data, group, container) {
