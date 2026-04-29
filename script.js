@@ -159,7 +159,7 @@ const g05Data = {
 const g07DataS2 = {
   "17/03/2026": ["Absent","Absent","Absent","Présent","Absent","Absence Justifiée","Présent","Présent","Absent","Absent","Absent","Présent","Présent","Absent","Absence Justifiée","Absent","Présent","Présent","Présent","Absent","Absent"],
   "07/04/2026": ["Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
-  "14/04/2026": ["Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent"],
+  "14/04/2026": ["Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absence Justifiée","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent"],
   "21/04/2026": ["Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Absence Justifiée","Présent","Présent","Absent","Absent"],
   "28/04/2026": ["Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"]
 };
