@@ -43,20 +43,35 @@ const examTexts = {
 const btnNotes = document.getElementById("btnNotes");
 
 const studentsG08 = [
-  "Abderrezek Akram","Ameziane Sid-Ali","Belaidi Abdellatif","Benadjiel Wissam","Benali Abdallah Merouane",
+  "Abderrezek Akram   (+01)","Ameziane Sid-Ali","Belaidi Abdellatif","Benadjiel Wissam (+0.5)","Benali Abdallah Merouane",
   "Benguessoum Mohamed Arezki","BENKEZIM Sofiane","Biou Mohamed Amine","Bouhealouane Faiz","Bouska Chokri",
-  "Bouzar Dilmi Djihad","Chendri Zakaria","Dilmi Anes","Guehaz Sifeddine","Hamzaoui Dina",
-  "Khattab Ilyes Abdelaziz","Khiat Sarra","Larbi Maria","Mazouzi Hadil","Mezghrani Dalia",
-  "Rachidi Zakaria","Seddiki Khouloud","Smail Ziad","Yahiaoui Hamza","Ziouar Khaoula"
+  "Bouzar Dilmi Djihad","Chendri Zakaria","Dilmi Anes","Guehaz Sifeddine(+01)","Hamzaoui Dina(+0.5)",
+  "Khattab Ilyes Abdelaziz","Khiat Sarra","Larbi Maria  (+01.5)","Mazouzi Hadil","Mezghrani Dalia",
+  "Rachidi Zakaria","Seddiki Khouloud","Smail Ziad","Yahiaoui Hamza","Ziouar Khaoula (+03)"
 ];
 
 const studentsG07 = [
-  "Allouche Mohammed Abdellah","Belaid Wail","Ben Amor Lokmane",
-  "Benabderrahmane Tahhil Fadjer","Benkaddour Abdelkader Mahieddine",
-  "Berziga Mohamed","Boughara Achraf","Bousba Aymen","Chellali Abdessalam",
-  "Dib Nesrine","Guadi Zahra","Kadri Mourad","Khettar Azouaou",
-  "Lidi Moussa Mohamed Yacine","Maouche Abdelhak","Messaoudene Chouaib",
-  "Necibdia Abdelmouay","Ouzenati Khokha","Sari Aymen","Yahi Hadda Lyna","Zerrouga Younes"
+  "Allouche Mohammed Abdellah",
+  "Belaid Wail",
+  "Benabderrahmane Tahhil Fadjer",
+  "Ben Amor Lokmane (+01)",
+  "Benkaddour Abdelkader Mahieddine",
+  "Berziga Mohamed",
+  "Boughara Achraf (+0.5)",
+  "Bousba Aymen",
+  "Chellali Abdessalam",
+  "Dib Nesrine",
+  "Guadi Zahra",
+  "Kadri Mourad (+01)",
+  "Khettar Azouaou",
+  "Maouche Abdelhak",
+  "Messaoudene Chouaib",
+  "Necibdia Abdelmouay",
+  "Ouzenati Khokha",
+  "Sari Aymen",
+  "Sidi Moussa Mohamed Yacine  (+0.5)",
+  "Yahi Hadda Lyna (+02)",
+  "Zerrouga Younes"
 ];
 
 const studentsG14 = [
@@ -157,18 +172,23 @@ const g05Data = {
  * ====== بيانات الحضور السداسي الثاني S2 ======
  ***********************************/
 const g07DataS2 = {
-  "17/03/2026": ["Absent","Absent","Absent","Présent","Absent","Absence Justifiée","Présent","Présent","Absent","Absent","Absent","Présent","Présent","Absent","Absence Justifiée","Absent","Présent","Présent","Présent","Absent","Absent"],
+  "24/02/2026": ["Présent","Présent","Absence Justifiée","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absence Justifiée","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
+  "03/03/2026": ["Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Absent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent"],
+  "17/03/2026": ["Absent","Absent","Absent","Présent","Absent","Absent","Présent","Présent","Absent","Absence Justifiée","Absent","Présent","Présent","Absence Justifiée","Absent","Absent","Présent","Présent","Présent","Absent","Absent"],
   "07/04/2026": ["Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
   "14/04/2026": ["Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absence Justifiée","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent"],
-  "21/04/2026": ["Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Absence Justifiée","Présent","Présent","Absent","Absent"],
-  "28/04/2026": ["Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"]
+  "21/04/2026": ["Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absence Justifiée","Absent","Présent","Présent","Absent","Absent"],
+  "28/04/2026": ["Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Absent"]
 };
 
 const g08DataS2 = {
+  "24/02/2026": ["Absent","Présent","Présent","Présent","Absent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent"],
+  "03/03/2026": ["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
   "17/03/2026": ["Présent","Présent","Présent","Présent","Absent","Présent","Absent","Absent","Présent","Absent","Présent","Présent","Présent","Absent","Présent","Absent","Absent","Présent","Présent","Présent","Absent","Présent","Absent","Absent","Absent"],
-  "07/04/2026": ["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
+    "07/04/2026": ["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
   "14/04/2026": ["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent"],
-  "21/04/2026": ["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent"]
+  "21/04/2026": ["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Présent","Absent"],
+  "28/04/2026": ["Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent","Présent","Présent","Présent","Présent","Absent","Présent","Présent"]
 };
 /***********************************
  * ====== TDs + PDF ====== 
@@ -502,8 +522,8 @@ function showGroup07() {
     "Benabderrahmane Tahhil Fadjer","Benkaddour Abdelkader Mahieddine",
     "Berziga Mohamed","Boughara Achraf","Bousba Aymen","Chellali Abdessalam",
     "Dib Nesrine","Guadi Zahra","Kadri Mourad","Khettar Azouaou",
-    "Lidi Moussa Mohamed Yacine","Maouche Abdelhak","Messaoudene Chouaib",
-    "Necibdia Abdelmouay","Ouzenati Khokha","Sari Aymen","Yahi Hadda Lyna","Zerrouga Younes"
+    "Sidi Moussa Mohamed Yacine","Maouche Abdelhak","Messaoudene Chouaib",
+    "Necibdia Abdelmouaz","Ouzenati Khokha","Sari Aymen","Yahi Hadda Lyna   (+02)","Zerrouga Younes"
   ];
 
   let rows = "";
@@ -616,13 +636,13 @@ function showGroup08() {
   clearAll();
 
   const students08 = [
-    "Abderrezek Akram","Ameziane Sid-Ali","Belaidi Abdellatif",
-    "Benadjiel Wissam","Benali Abdallah Merouane","Benguessoum Mohamed Arezki",
+    "Abderrezek Akram   (+01)","Ameziane Sid-Ali","Belaidi Abdellatif",
+    "Benadjiel Wissam   (+0.5)","Benali Abdallah Merouane","Benguessoum Mohamed Arezki",
     "BENKEZIM Sofiane","Biou Mohamed Amine","Bouhealouane Faiz","Bouska Chokri",
-    "Bouzar Dilmi Djihad","Chendri Zakaria","Dilmi Anes","Guehaz Sifeddine",
-    "Hamzaoui Dina","Khattab Ilyes Abdelaziz","Khiat Sarra","Larbi Maria",
+    "Bouzar Dilmi Djihad","Chendri Zakaria","Dilmi Anes","Guehaz Sifeddine(+01)",
+    "Hamzaoui Dina  (+0.5)","Khattab Ilyes Abdelaziz","Khiat Sarra","Larbi Maria   (+1.5)",
     "Mazouzi Hadil","Mezghrani Dalia","Rachidi Zakaria","Seddiki Khouloud",
-    "Smail Ziad","Yahiaoui Hamza","Ziouar Khaoula"
+    "Smail Ziad","Yahiaoui Hamza","Ziouar Khaoula        (+03)"
   ];
 
   let rows = "";
@@ -696,7 +716,7 @@ const dataG07 = [
     ["11", "Guadi Zahra", "02,25", "09.50"],
     ["12", "Kadri Mourad", "3.25", "5.25"],
     ["13", "Khettar Azouaou", "06", "03.50"],
-    ["14", "Lidi Moussa Mohamed Yacine", "09.50", "14"],
+    ["14", "Sidi Moussa Mohamed Yacine", "09.50", "14"],
     ["15", "Maouche Abdelhak", "04", "13"],
     ["16", "Messaoudene Chouaib", "01,50", "02.75"],
     ["17", "Necibdia Abdelmouay", "02,50", "04,75"],
